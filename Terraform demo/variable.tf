@@ -1,6 +1,6 @@
-variable "prefix" {
-  default = "princek"
-}
+# variable "prefix" {
+#   default = "princek"
+# }
 
 variable "vlocation" {
   default = "eastus"
