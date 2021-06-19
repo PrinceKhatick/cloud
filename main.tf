@@ -3,8 +3,8 @@ terraform {
  backend "azurerm" {
     storage_account_name = "princestorage"
     container_name       = "princecontainer"
-    # key                  = "terraform.tfstate"
-	# access_key  = "imau4z20XBQuOoHQcAOlx++KKkqCX7khZNvi8hcjvSE3WEVqMlwqJi+2M8/R8TuSg5bQNC8WMmevy97/YeZf1A=="
+    key                  = "terraform.tfstate"
+	access_key  = "imau4z20XBQuOoHQcAOlx++KKkqCX7khZNvi8hcjvSE3WEVqMlwqJi+2M8/R8TuSg5bQNC8WMmevy97/YeZf1A=="
   features{}
 	}
 }
