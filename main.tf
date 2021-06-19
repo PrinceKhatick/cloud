@@ -1,4 +1,5 @@
 terraform {
+    required_version = ">=0.13"
 backend "azurerm" {
     resource_group_name = "prince-rg"
     storage_account_name = "princestorage"
