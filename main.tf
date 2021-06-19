@@ -1,20 +1,20 @@
 terraform {
-  required_version = ">= 0.11" 
+  required_version = "= 2.13.0" 
  backend "azurerm" {
- storage_account_name = "__terraformstorageaccount__"
-     container_name       = "pkcontainer"
-     key                  = "terraform.tfstate"
-	access_key  ="Qkr7myKS04NL3T6LkZR3ZJo8hXzSi0jQud/Z3pt2RQ2FRVHz2M7aRfybTgCZy16sOP3dVOsbXLLplTlBGUPuAg=="
+    storage_account_name = "princestorage"
+    container_name       = "princecontainer"
+    key                  = "terraform.tfstate"
+	access_key  = "imau4z20XBQuOoHQcAOlx++KKkqCX7khZNvi8hcjvSE3WEVqMlwqJi+2M8/R8TuSg5bQNC8WMmevy97/YeZf1A=="
   features{}
 	}
 }
 provider "azurerm" {
-  # subscription_id             = "4ce31b1f-a57c-460a-8872-01fb7723db79"
-  # client_id                   = "00925964-dcc1-4621-8a9d-8001466a2753"
-  # client_certificate_password = "rno4vkBspqTp4xtsDwZ0p.dkt7I0k1OZAg"
-  # tenant_id                   = "0c6fce42-0449-4574-bf9c-a261c5635a02"
+  # subscription_id             = "3457d5d0-1535-40c6-85fb-cb1919104698"
+  # client_id                   = "ac2f1e9d-1c78-4921-82ab-b145bb6bfc50"
+  # client_certificate_password = "0lY29KJJIAujfH56fkjy6o9C3_JfBubUFM"
+  # tenant_id                   = "afe00151-b24a-41de-97f7-be24c523f080"
 
- # az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/4ce31b1f-a57c-460a-8872-01fb7723db79"
+ # az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/3457d5d0-1535-40c6-85fb-cb1919104698"
 
    features {}
 }
