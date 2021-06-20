@@ -1,5 +1,4 @@
 terraform {
-    required_version = ">=0.1"
 backend "azurerm" {
     resource_group_name = "prince-rg"
     storage_account_name = "princestorage"
@@ -7,14 +6,9 @@ backend "azurerm" {
 	}
 }
 provider "azurerm" {
-  # subscription_id             = "3457d5d0-1535-40c6-85fb-cb1919104698"
-  # client_id                   = "ac2f1e9d-1c78-4921-82ab-b145bb6bfc50"
-  # client_certificate_password = "0lY29KJJIAujfH56fkjy6o9C3_JfBubUFM"
-  # tenant_id                   = "afe00151-b24a-41de-97f7-be24c523f080"
-
- # az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/3457d5d0-1535-40c6-85fb-cb1919104698"
-    version = "=0.14.7"
-   features {}
+  version = "~>2.46.0"
+    features {}
+  }
 }
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_name
