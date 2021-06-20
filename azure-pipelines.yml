@@ -17,29 +17,34 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: TerraformInstaller@0
-  displayName: install
-  inputs:
-    terraformVersion: '0.13.7'
 - task: TerraformTaskV2@2
-  displayName: 'init'
   inputs:
     provider: 'azurerm'
-    command: 'init'
-    backendServiceArm: 'azure-prince-sp'
-    backendAzureRmResourceGroupName: 'prince_rg'
-    backendAzureRmStorageAccountName: 'princestorage'
-    backendAzureRmContainerName: 'princecontainer'
-    backendAzureRmKey: 'terraform.tfstate'
-- task: TerraformTaskV2@2
-  displayName: 'plan'
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
+    command: 'destroy'
     environmentServiceNameAzureRM: 'azure-prince-sp'
-- task: TerraformTaskV2@2
-  displayName: 'apply'
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    environmentServiceNameAzureRM: 'azure-prince-sp'
+# - task: TerraformInstaller@0
+#   displayName: install
+#   inputs:
+#     terraformVersion: '0.13.7'
+# - task: TerraformTaskV2@2
+#   displayName: 'init'
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'init'
+#     backendServiceArm: 'azure-prince-sp'
+#     backendAzureRmResourceGroupName: 'prince_rg'
+#     backendAzureRmStorageAccountName: 'princestorage'
+#     backendAzureRmContainerName: 'princecontainer'
+#     backendAzureRmKey: 'terraform.tfstate'
+# - task: TerraformTaskV2@2
+#   displayName: 'plan'
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'plan'
+#     environmentServiceNameAzureRM: 'azure-prince-sp'
+# - task: TerraformTaskV2@2
+#   displayName: 'apply'
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'apply'
+#     environmentServiceNameAzureRM: 'azure-prince-sp'
