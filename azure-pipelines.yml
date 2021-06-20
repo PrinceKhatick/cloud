@@ -36,10 +36,10 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: 'azure-prince-sp'
+    environmentServiceNameAzureRM: 'Azure for Students (3457d5d0-1535-40c6-85fb-cb1919104698)'
 - task: TerraformTaskV2@2
   displayName: 'apply'
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    environmentServiceNameAzureRM: 'azure-prince-sp'
+    environmentServiceNameAzureRM: 'Azure for Students (3457d5d0-1535-40c6-85fb-cb1919104698)'
