@@ -26,7 +26,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'azure-prince-sp'
+    backendServiceArm: 'Azure for Students (3457d5d0-1535-40c6-85fb-cb1919104698)'
     backendAzureRmResourceGroupName: 'prince_rg'
     backendAzureRmStorageAccountName: 'princestorage'
     backendAzureRmContainerName: 'princecontainer'
