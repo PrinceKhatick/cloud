@@ -9,7 +9,6 @@ provider "azurerm" {
   version = "~>2.46.0"
     features {}
   }
-}
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_name
   location = var.resource_location
