@@ -9,15 +9,15 @@ provider "azurerm" {
   version = "~>2.46.0"
     features {}
   }
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "rge" {
   name     = var.resource_name
   location = var.resource_location
 }
 
 resource "azurerm_app_service_plan" "app_plan" {
   name                = var.app_service_plan_name
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rge.location
+  resource_group_name = azurerm_resource_group.rge.name
 
   sku {
     tier = "Standard"
@@ -27,8 +27,8 @@ resource "azurerm_app_service_plan" "app_plan" {
 
 resource "azurerm_app_service" "web_app" {
   name                = var.app_service_name
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rge.location
+  resource_group_name = azurerm_resource_group.rge.name
   app_service_plan_id = azurerm_app_service_plan.app_plan.id
 
   site_config {
