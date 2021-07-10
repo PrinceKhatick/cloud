@@ -6,7 +6,6 @@ backend "azurerm" {
 	}
 }
 provider "azurerm" {
-  version = "~>2.46.0"
     features {}
   }
 resource "azurerm_resource_group" "rge" {
