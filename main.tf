@@ -3,6 +3,7 @@ backend "azurerm" {
     resource_group_name = "prince-rg"
     storage_account_name = "princestorage"
     container_name       = "princecontainer"
+    key = "terraform.tfstate"
 	}
 }
 provider "azurerm" {
