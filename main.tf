@@ -1,7 +1,7 @@
 terraform {
 backend "azurerm" {
     resource_group_name = "prince-rg"
-    storage_account_name = "pkstorage"
+    storage_account_name = "pkstorage987"
     container_name       = "pkcontainer"
     key = "terraform.tfstate"
 	}
