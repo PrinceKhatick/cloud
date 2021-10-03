@@ -1,6 +1,6 @@
-resource_name = "kpri"
+resource_name = "prik"
 
-resource_location = "eastus"
+resource_location = "westus"
 
 app_service_plan_name = "kp1appserviceplan"
 
