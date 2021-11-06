@@ -1,7 +1,15 @@
-resource_name = "prik"
+resource_name = "DemoRG"
 
 resource_location = "westus"
 
-app_service_plan_name = "kp1appserviceplan"
+virtual_network_name = "VirtualNetworkDemo"
 
-app_service_name = "kp1appservice"
+subnet_name1 = "subnetDemo1"
+
+subnet_name2 = "subnetDemo2"
+
+storage_account_name = "storageDemo"
+
+# app_service_plan_name = "kp1appserviceplan"
+
+# app_service_name = "kp1appservice"
