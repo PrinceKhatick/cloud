@@ -25,7 +25,7 @@ resource "azurerm_virtual_network" "demo_virtual_network" {
 }
 
 //Creating Subnet 1
-resource "azurerm_subnet1" "demo_subnet1" {
+resource "azurerm_subnet" "demo_subnet1" {
   name                 = var.subnet_name1
   resource_group_name  = azurerm_resource_group.demo_resource_group.name
   virtual_network_name = azurerm_virtual_network.demo_virtual_network.name
@@ -34,7 +34,7 @@ resource "azurerm_subnet1" "demo_subnet1" {
 }
 
 //Creating Subnet 2
-resource "azurerm_subnet2" "demo_subnet2" {
+resource "azurerm_subnet" "demo_subnet2" {
   name                 = var.subnet_name2
   resource_group_name  = azurerm_resource_group.demo_resource_group.name
   virtual_network_name = azurerm_virtual_network.demo_virtual_network.name
