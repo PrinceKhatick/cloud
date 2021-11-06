@@ -8,7 +8,7 @@ subnet_name1 = "subnetDemo1"
 
 subnet_name2 = "subnetDemo2"
 
-storage_account_name = "storageDemo"
+storage_account_name = "storagedemo"
 
 # app_service_plan_name = "kp1appserviceplan"
 
