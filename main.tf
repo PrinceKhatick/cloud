@@ -51,7 +51,7 @@ resource "azurerm_storage_account" "demo_storage_account" {
   account_replication_type = "LRS"
 
   network_rules {
-    default_action             = "Deny"
+    default_action             = "Allow"
     ip_rules                   = ["113.21.79.74"]
     virtual_network_subnet_ids = [azurerm_subnet.demo_subnet1.id,azurerm_subnet.demo_subnet2.id]
   }
@@ -60,6 +60,7 @@ resource "azurerm_storage_account" "demo_storage_account" {
     environment = "DEV"
   }
 }
+
 
 # //Creating App Service Plan
 # resource "azurerm_app_service_plan" "demo_app_service_plan" {
